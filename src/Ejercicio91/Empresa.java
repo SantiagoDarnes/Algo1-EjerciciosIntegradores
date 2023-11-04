@@ -15,6 +15,22 @@ public class Empresa {
         this.areas = areas;
     }
 
+    public String perteneceArea(Empleado empleado) {
+        
+        try {
+            for (Area area: areas) {
+                if (area.pertenece(empleado)) {
+                return area.getNombre();
+                }
+            }
+        }
+        catch (Exception e) {
+            System.out.println("Ocurrio un error: " + e.getMessage());
+        }
+        return null;
+
+    }
+
     public String perteneceArea(int numeroEmpleado) {
         try {
             for (Area area: areas) {

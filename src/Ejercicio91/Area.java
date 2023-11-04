@@ -25,6 +25,10 @@ public class Area {
         this.empleados = empleados;
     }
 
+    public boolean pertenece(Empleado empleado) {
+        return empleados.contains(empleado);
+    }
+
     public boolean pertenece(int numeroEmpleado) {
         for (Empleado empleado: empleados) {
             if (empleado.getNumeroEmpleado() == numeroEmpleado) {
